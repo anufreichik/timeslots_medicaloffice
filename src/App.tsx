@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import TimeSlotDropDown from "./TimeSlotDropDown";
+import TaxiForm from "./TaxiForm";
 
 export interface ISetup {
     officeTimeStart: string;
@@ -25,9 +27,11 @@ function App() {
     }
 
     return (
-        <div className="App">
+        <div>
             <TimeSlotDropDown timeSlotsSetup={timeSlotsSetup} unavailableSlotIndexes={unavailableSlotIndexes}
                               updateUnavailableSlotIndexes={updateUnavailableSlotIndexes}/>
+
+            <TaxiForm/>
         </div>
     );
 }

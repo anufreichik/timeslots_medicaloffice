@@ -73,12 +73,16 @@ const TimeSlotDropDown: React.FC<ITimeSlotDropDownProps> = ({
     }
 
     return (
-        <div>
-            <select style={{width: '500px', height: '30px'}} onChange={handleSelectChange}>
+        <div className='container mb-2 mt-2'>
+            <div className='row'>
+            <select className="form-select" onChange={handleSelectChange}>
                 {slots.map(el => <option key={el.value} value={el.value} disabled={el.disabled} style={{color:`${el.disabled?'red':''}`}}>{el.name}</option>)}
             </select>
-            <br/>
-            <button onClick={handleSubmit}>Submit</button>
+            </div>
+            <div className="row">
+                <button onClick={handleSubmit} className='btn btn-secondary btn-sm'>Submit</button>
+            </div>
+
         </div>
     );
 }
