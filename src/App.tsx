@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import TimeSlotDropDown from "./TimeSlotDropDown";
+
+export interface ISetup {
+    officeTimeStart: string;
+    officeTimeEnd: string;
+    appointmentSlot: number;
+}
+
+const timeSlotsSetup: ISetup = {
+    officeTimeStart: '08:00:00',
+    officeTimeEnd: '17:00:00',
+    appointmentSlot: 30
+}
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [unavailableSlotIndexes, setUnavailableSlotIndexes] = useState<number[]>([]);
+
+    const updateUnavailableSlotIndexes = (ind: number) => {
+        if (ind >= 0) {
+            setUnavailableSlotIndexes([...unavailableSlotIndexes, ind]);
+        }
+    }
+
+    return (
+        <div className="App">
+            <TimeSlotDropDown timeSlotsSetup={timeSlotsSetup} unavailableSlotIndexes={unavailableSlotIndexes}
+                              updateUnavailableSlotIndexes={updateUnavailableSlotIndexes}/>
+        </div>
+    );
 }
 
 export default App;
