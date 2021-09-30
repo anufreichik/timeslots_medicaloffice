@@ -3,6 +3,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import TimeSlotDropDown from "./TimeSlotDropDown";
 import TaxiForm from "./TaxiForm";
+import GitHubRepos from "./GitHubRepos";
+import {
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
 
 export interface ISetup {
     officeTimeStart: string;
@@ -16,6 +22,9 @@ const timeSlotsSetup: ISetup = {
     appointmentSlot: 30
 }
 
+
+
+
 function App() {
 
     const [unavailableSlotIndexes, setUnavailableSlotIndexes] = useState<number[]>([]);
@@ -28,10 +37,34 @@ function App() {
 
     return (
         <div>
-            <TimeSlotDropDown timeSlotsSetup={timeSlotsSetup} unavailableSlotIndexes={unavailableSlotIndexes}
-                              updateUnavailableSlotIndexes={updateUnavailableSlotIndexes}/>
+                <nav>
+                    <ul>
+                        <li>
+                            <Link to="/">Github Repos for JavaScript</Link>
+                        </li>
+                        <li>
+                            <Link to="/taxi">Taxi Form</Link>
+                        </li>
+                        <li>
+                            <Link to="/slots">Time Slots Dropdown</Link>
+                        </li>
+                    </ul>
+                </nav>
 
-            <TaxiForm/>
+                {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+                <Switch>
+                    <Route path="/taxi">
+                        <TaxiForm/>
+                    </Route>
+                    <Route path="/slots">
+                        <TimeSlotDropDown timeSlotsSetup={timeSlotsSetup} unavailableSlotIndexes={unavailableSlotIndexes}
+                                          updateUnavailableSlotIndexes={updateUnavailableSlotIndexes}/>
+                    </Route>
+                    <Route path="/">
+                        <GitHubRepos />
+                    </Route>
+                </Switch>
         </div>
     );
 }

@@ -1,0 +1,75 @@
+.github-list-item-container{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content:space-evenly;
+    padding: 1.1vh;
+    border: 2px solid rgba(222, 228, 230, 1);
+    margin-bottom: 2vh;
+    color:rgba(141, 150, 153, 1);
+    font-size: 16px;
+}
+.github-header-container{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content:space-evenly;
+    padding: 1.1vh;
+    border-bottom: 1px solid rgba(222, 228, 230, 1);
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+.col-header{
+    color: rgb(33, 164, 164);
+    font-weight: 700;
+}
+
+.github-list-item-col{
+    text-align: left;
+}
+.col-name{
+    width: 20%;
+}
+.col-url{
+    width:40%;
+}
+.col-owner{
+    width:20%;
+}
+.col-forks, .col-issues{
+    width: 10%;
+    text-align: center;
+}
+
+.dashboard{
+    display: flex;
+    flex-direction: column;
+    max-width: 1128px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.pagerButton{
+    width:30px;
+    height: 30px;
+    margin:10px;
+    background-color:gold;
+    border:0;
+    font-weight: 700;
+}
+.pagerSelectedButton{
+    border:2px solid black;
+}
+.pagerContainer{
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+}
+.loader{
+   display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content:center;
+    margin-bottom: 15px;
+}
+
+
