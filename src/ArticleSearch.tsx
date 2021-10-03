@@ -28,7 +28,7 @@ const ArticleSearch: React.FC<IProps> = ({search, reset}) => {
                         <button className="btn btn-outline-secondary" type="button"
                                 onClick={() => search(inputText)}>Search
                         </button>
-                        <button className="btn btn-outline-secondary" type="button" onClick={resetClick}>Reset
+                        <button className="btn btn-success" type="button" onClick={resetClick}>Reset
                         </button>
                     </div>
                 </div>

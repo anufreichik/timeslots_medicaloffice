@@ -11,7 +11,7 @@ const ArticleItem:React.FC<IProps>=({article})=>{
                <h3 className='col-12 p-3 text-black-50 text-decoration-underline'>{article.title}</h3>
            </div>
             <div className='row'>
-                <div className='col-10 offset-2 text-body  mb-3'>{article.text}</div>
+                <div className='col-10 offset-2 text-muted   mb-3'>{article.text}</div>
                 <hr/>
             </div>
         </div>
