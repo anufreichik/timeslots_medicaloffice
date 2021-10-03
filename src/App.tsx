@@ -9,6 +9,7 @@ import {
     Route,
     Link
 } from "react-router-dom";
+import Articles from "./Articles";
 
 export interface ISetup {
     officeTimeStart: string;
@@ -48,12 +49,18 @@ function App() {
                         <li>
                             <Link to="/slots">Time Slots Dropdown</Link>
                         </li>
+                        <li>
+                            <Link to="/articles">Articles</Link>
+                        </li>
                     </ul>
                 </nav>
 
                 {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
                 <Switch>
+                    <Route path="/articles">
+                        <Articles/>
+                    </Route>
                     <Route path="/taxi">
                         <TaxiForm/>
                     </Route>
