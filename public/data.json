@@ -1,0 +1,44 @@
+[
+  {
+    "_id": "616c56ecdc804ba4decdd0e2",
+    "name": "Unit Testing",
+    "description": "Labore eiusmod labore non fugiat deserunt occaecat elit fugiat ea veniam enim. Proident ipsum officia aute id elit mollit ea incididunt veniam labore est tempor laboris. Do est ullamco nisi id ad duis nisi excepteur aliqua amet laboris eu dolor non. Veniam id commodo in exercitation exercitation officia. Anim id sit qui ut. Aliquip velit duis aliqua nostrud pariatur tempor sit amet.\r\n",
+    "price": "$699",
+    "startDate": "2021-11-07"
+  },
+  {
+    "_id": "616c56ec582c09b88e7af7e3",
+    "name": "JavaScript Beginner",
+    "description": "Anim ex labore dolore ut elit ipsum qui cillum magna. Anim dolore amet eiusmod ea eu. Exercitation amet incididunt consectetur laborum sint nostrud culpa eiusmod Lorem incididunt. Laborum sit laborum est amet. Duis tempor aliqua laborum tempor voluptate sunt cupidatat ex consectetur excepteur quis.\r\n",
+    "price": "$399",
+    "startDate": "2021-11-14"
+  },
+  {
+    "_id": "616c56ec002ac9551dfd459e",
+    "name": "React",
+    "description": "Ut veniam laborum labore ipsum duis officia nisi culpa. Laborum esse dolore aliqua eiusmod nisi esse anim. Laborum consectetur Lorem amet consequat veniam ut nulla anim. Ullamco nostrud ea adipisicing id non aliqua labore ipsum do aliquip consectetur occaecat est. Tempor culpa qui nisi amet et adipisicing est. Commodo ea ex incididunt ad eiusmod nisi do veniam laborum cupidatat enim quis irure.\r\n",
+    "price": "$1999",
+    "startDate": "2021-11-18"
+  },
+  {
+    "_id": "616c56ec8c0a3219840cadae",
+    "name": "JavaScript Advanced",
+    "description": "Duis deserunt sunt cupidatat quis eu. Mollit ea ex do aute ex velit irure commodo velit Lorem cillum sunt Lorem non. Exercitation fugiat exercitation ad laborum do amet sint amet ex. Ut ea tempor dolor sunt enim. Ad occaecat Lorem ipsum sunt mollit adipisicing enim sunt excepteur.\r\n",
+    "price": "$3902",
+    "startDate": "2021-11-15"
+  },
+  {
+    "_id": "616c56ecac3e003587f4f1d8",
+    "name": "Git for Beginners",
+    "description": "Nisi eu do pariatur veniam officia occaecat ipsum irure officia. Sint laborum anim reprehenderit velit Lorem. Ipsum occaecat incididunt aliquip commodo cillum Lorem. Anim do occaecat anim aliquip. Culpa exercitation officia mollit ea eiusmod ea amet.\r\n",
+    "price": "$299",
+    "startDate": "2021-11-01"
+  },
+  {
+    "_id": "616c56ecf7449da2c13ad435",
+    "name": "Java",
+    "description": "Ut aute adipisicing exercitation proident. Tempor Lorem minim magna ipsum deserunt consequat. Ipsum reprehenderit reprehenderit labore velit aliqua cupidatat excepteur aute aute tempor magna ad excepteur. Eu magna ex elit ex laboris. Labore anim ad nulla commodo in consectetur labore.\r\n",
+    "price": "$3500",
+    "startDate": "2021-11-02"
+  }
+]

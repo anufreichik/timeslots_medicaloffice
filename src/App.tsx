@@ -10,6 +10,8 @@ import {
     Link
 } from "react-router-dom";
 import Articles from "./Articles";
+import CourseList from "./CourseList";
+import CourseItemView from "./CourseItemView";
 
 export interface ISetup {
     officeTimeStart: string;
@@ -36,6 +38,19 @@ function App() {
         }
     }
 
+    const deleteCourse = (id: string) => {
+
+        return fetch(`http://localhost:5000/courses/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(response => {
+            console.log(response);
+        })
+            .catch(err=>console.log(err))
+    }
+
     return (
         <div>
                 <nav>
@@ -51,6 +66,9 @@ function App() {
                         </li>
                         <li>
                             <Link to="/articles">Articles</Link>
+                        </li>
+                        <li>
+                            <Link to="/courses">Courses</Link>
                         </li>
                     </ul>
                 </nav>
@@ -68,9 +86,17 @@ function App() {
                         <TimeSlotDropDown timeSlotsSetup={timeSlotsSetup} unavailableSlotIndexes={unavailableSlotIndexes}
                                           updateUnavailableSlotIndexes={updateUnavailableSlotIndexes}/>
                     </Route>
+
+                    <Route path="/courses/:id">
+                        <CourseItemView deleteCourse={deleteCourse}/>
+                    </Route>
+                    <Route path="/courses">
+                        <CourseList/>
+                    </Route>
                     <Route path="/">
                         <GitHubRepos />
                     </Route>
+
                 </Switch>
         </div>
     );
