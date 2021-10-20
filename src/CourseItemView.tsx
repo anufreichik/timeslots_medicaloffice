@@ -25,6 +25,7 @@ const CourseItemView:React.FC<IProps>=({deleteCourse})=> {
             <div>{state.course.price}</div>
             <div>{state.course.startDate}</div>
             <div><button onClick={handleDelete}>Delete</button></div>
+            <div><button >Edit</button></div>
         </div>
     );
 }
