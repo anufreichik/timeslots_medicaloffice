@@ -12,6 +12,7 @@ import {
 import Articles from "./Articles";
 import CourseList from "./CourseList";
 import CourseItemView from "./CourseItemView";
+import SlideCards from "./Slide";
 
 export interface ISetup {
     officeTimeStart: string;
@@ -70,6 +71,9 @@ function App() {
                         <li>
                             <Link to="/courses">Courses</Link>
                         </li>
+                        <li>
+                            <Link to="/slides">Slide Example</Link>
+                        </li>
                     </ul>
                 </nav>
 
@@ -93,10 +97,12 @@ function App() {
                     <Route path="/courses">
                         <CourseList/>
                     </Route>
+                    <Route path="/slides">
+                        <SlideCards />
+                    </Route>
                     <Route path="/">
                         <GitHubRepos />
                     </Route>
-
                 </Switch>
         </div>
     );

@@ -9,8 +9,13 @@ export interface Course {
     price: string;
     startDate: string;
 }
-
-const CourseList = () => {
+export function getLowerLimitIndex(page:number, itemsPerPage:number){
+    return (page-1)*itemsPerPage;
+}
+export function getUpperLimitIndex(page:number,itemsPerPage:number){
+    return page*itemsPerPage;
+}
+const CourseList:React.FC = () => {
     const [list, setList] = useState<Course[]>([]);
     const [currentPage, setCurrentPage]=useState(1);
     const [totalCourses,setTotalCourses]=useState(0);
@@ -44,7 +49,7 @@ const CourseList = () => {
     return (
         <div className='container'>
             {list
-                .filter((_,i)=>i>=(currentPage-1)*ITEMS_PER_PAGE && i<currentPage*ITEMS_PER_PAGE)
+                .filter((_,i)=>i>=getLowerLimitIndex(currentPage,ITEMS_PER_PAGE) && i<getUpperLimitIndex(currentPage, ITEMS_PER_PAGE))
                 .map((el) =>
                 <CourseItem key={el.id} course={el}/>
             )}
